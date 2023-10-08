@@ -6,7 +6,7 @@ export type TAnimalType = "domestic" | "wild";
 export class WildAnimals {
     public static getAnimal(animal: string) {
         switch (animal) {
-            case "Lion": return new Lion(true, false);
+            case "Lion": return new Lion();
         }
     }
 }
@@ -16,8 +16,8 @@ export class WildAnimals {
 export class DomesticAnimals {
     public static getAnimal(animal: string) {
         switch (animal) {
-            case "Dog": return new Dog(true, true);
-            case "Cow": return new Cow(true, true);
+            case "Dog": return new Dog();
+            case "Cow": return new Cow();
         }
     }
 }

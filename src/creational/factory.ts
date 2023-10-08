@@ -27,22 +27,31 @@ export class Animal {
 }
 
 export class Lion extends Animal {
-    protected name: TAnimal = "Lion";
+    constructor(){
+        super(true, false);
+        this.name = "Lion";
+    }
 }
 export class Cow extends Animal {
-    protected name: TAnimal = "Cow";
+    constructor(){
+        super(false, true);
+        this.name = "Cow";
+    }
 }
 export class Dog extends Animal {
-    protected name: TAnimal = "Dog";
+    constructor(){
+        super(true, true);
+        this.name = "Dog";
+    }
 }
 
 
 export class AnimalCreator {
     public static createAnimal(animal: TAnimal) {
         switch (animal) {
-            case "Dog": return new Dog(true, true);
-            case "Lion": return new Lion(true, false); 
-            case "Cow": return new Cow(false, true); 
+            case "Dog": return new Dog();
+            case "Lion": return new Lion(); 
+            case "Cow": return new Cow(); 
         }
     }
 }
